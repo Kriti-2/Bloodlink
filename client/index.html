@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BloodLink • Smart Blood Network</title>
+  </head>
+  <body>
+    
+    <!-- TOP NAVBAR -->
+    <header class="top-bar">
+      <div class="top-inner">
+        <div class="brand">
+          <div class="app-title">BloodLink • Smart Blood Network</div>
+          <!-- <div class="app-sub">• Smart Blood Network</div> -->
+        </div>
+
+        <nav class="top-nav" aria-label="Main navigation">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="donor.html">Become Donor</a>
+          <a class="nav-link" href="need-blood.html">Emergency</a>
+          <a class="nav-link" href="find-donor.html">Find Donor</a>
+          <a class="nav-link" href="admin.html">Admin</a>
+          <!-- <a class="nav-link" href="#about">About</a> -->
+          <!-- <a class="nav-link" href="#how">How It Works</a> -->
+          <!-- <a class="nav-link" href="#benefits">Why BloodLink?</a> -->
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-wrapper">
+      <!-- HERO + STATS -->
+      <section class="hero-block">
+        <div class="hero-left">
+          <h1 class="hero-title">Every Drop Counts.</h1>
+          <p class="hero-sub">
+            BloodLink connects verified donors, hospitals and patients instantly.
+            Register as a donor or raise an urgent request — all in one place.
+          </p>
+
+          <div class="hero-cta-row">
+            <a class="btn hero-primary" href="donor.html">Become a Donor</a>
+            <a class="btn hero-outline" href="need-blood.html">Need Blood Now</a>
+          </div>
+
+          <p class="hero-mini">💡 It takes less than 2 minutes to register on BloodLink.</p>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-image-wrapper">
+            <img
+              src="https://t3.ftcdn.net/jpg/15/66/44/36/240_F_1566443610_G4bO26nZ4DWvl2P4oUuQVDkt6kRWz3iO.jpg"
+              alt="Volunteer blood donation"
+              class="hero-image"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Stats placed alongside image (under it on small screens) -->
+          <div class="stats-row">
+            <div class="stat-box">
+              <h3 id="total-donors">0</h3>
+              <p>Total Donors</p>
+            </div>
+            <div class="stat-box">
+              <h3 id="active-requests">0</h3>
+              <p>Active Requests</p>
+            </div>
+            <div class="stat-box">
+              <h3 id="lives-saved">0</h3>
+              <p>Lives Saved</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <!-- ABOUT SECTION (replace existing about) -->
+<section id="aboutSection" class="about-section">
+  <div class="about-inner wide about-animated">
+    <div class="about-header">
+      <h2>About BloodLink <span class="about-emoji">🩸</span></h2>
+    </div>
+
+    <div class="about-body">
+      <p>
+        BloodLink is a smart blood donation network that connects verified donors,
+        hospitals and patients within seconds. Our mission is to ensure no emergency
+        is delayed due to lack of information or coordination. <span class="pulse-emoji">❤️</span>
+      </p>
+
+      <p>
+        Join as a donor to receive nearby request alerts, or raise an emergency request
+        so verified donors in your city can respond quickly. We prioritise safety, verification,
+        and timely matches — because every moment matters. <span class="spark">⚡️</span>
+      </p>
+
+      <div class="about-cta-row">
+        <a class="btn hero-primary" href="donor.html">Register as Donor</a>
+        <a class="btn hero-outline" href="need-blood.html">Raise a Request</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <!-- HOW IT WORKS -->
+      <section id="how" class="how-section">
+        <h2>How It Works</h2>
+        <div class="steps-container">
+          <div class="step-box">
+            <div class="step-number">1</div>
+            <h4>Register</h4>
+            <p>Create your donor profile with blood group and location.</p>
+          </div>
+          <div class="step-box">
+            <div class="step-number">2</div>
+            <h4>Get Matched</h4>
+            <p>We notify nearby verified donors instantly when a request is raised.</p>
+          </div>
+          <div class="step-box">
+            <div class="step-number">3</div>
+            <h4>Save a Life</h4>
+            <p>Donate safely and help someone in critical need — every donation matters.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFITS -->
+      <section id="benefits" class="benefits-section">
+        <h2>Why BloodLink?</h2>
+        <div class="benefit-grid">
+          <div class="benefit-card"><strong>Real-time alerts</strong><p>Instant notifications for urgent requests.</p></div>
+          <div class="benefit-card"><strong>Location matching</strong><p>Find donors quickly using proximity matching.</p></div>
+          <div class="benefit-card"><strong>Verified donors</strong><p>We prioritize safety and verification.</p></div>
+          <div class="benefit-card"><strong>Community impact</strong><p>Every donation helps a family.</p></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact-section">
+        <h2>Get in Touch</h2>
+        <p>If you have questions or want to collaborate, write to us.</p>
+        <a class="btn contact-btn" href="mailto:bloodlink.support@gmail.com">Contact Us</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>&copy; <span id="year"></span> BloodLink</small>
+    </footer>
+
+    <!-- your existing JS bundle -->
+    <script type="module" src="/src/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

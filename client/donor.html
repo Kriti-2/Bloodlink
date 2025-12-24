@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BloodLink • Become Donor</title>
+  </head>
+  <body>
+    <!-- ✅ TOP NAVBAR (SAME AS INDEX) -->
+     
+    <header class="top-bar">
+      <div class="top-inner">
+        <div class="app-title">
+          BloodLink <span>• Smart Blood Network</span>
+        </div>
+
+        <nav class="top-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="donor.html">Become Donor</a>
+          <a class="nav-link" href="need-blood.html">Emergency</a>
+          <a class="nav-link" href="find-donor.html">Find Donor</a>
+          <a class="nav-link" href="admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ✅ PAGE CONTENT -->
+    <main class="page-wrapper">
+      <section id="donor" class="card wide-card">
+        <h2 class="section-title">Become a Donor</h2>
+        <p class="section-sub">
+          Join the BloodLink network and get matched with nearby patients when your
+          blood can save a life.
+        </p>
+
+        <!-- ✅ THIS FORM MATCHES YOUR main.js EXACTLY -->
+        <form id="donorForm">
+          <input placeholder="Full Name" id="name" />
+          <input placeholder="Phone Number" id="phone" />
+          <input placeholder="City" id="city" />
+          <input placeholder="Area / Landmark" id="area" />
+
+          <select id="bloodGroup">
+            <option value="">Select Blood Group</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>O+</option><option>O-</option>
+            <option>AB+</option><option>AB-</option>
+          </select>
+
+          <button type="submit" class="btn">Register Donor</button>
+        </form>
+
+        <!-- ✅ MESSAGE ID MATCHES main.js -->
+        <p id="message" class="message"></p>
+      </section>
+    </main>
+
+    <!-- ✅ THIS IS VERY IMPORTANT (VITE + AXIOS SUPPORT) -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BloodLink • Admin</title>
+  </head>
+  <body>
+    <!-- TOP NAVBAR -->
+     
+    <header class="top-bar">
+      <div class="top-inner">
+        <div class="app-title">
+          BloodLink <span>• Smart Blood Network</span>
+        </div>
+
+        <nav class="top-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="donor.html">Become Donor</a>
+          <a class="nav-link" href="need-blood.html">Emergency</a>
+          <a class="nav-link" href="find-donor.html">Find Donor</a>
+          <a class="nav-link active" href="admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-wrapper">
+      <!-- ADMIN LOGIN CARD -->
+      <section id="adminLoginCard" class="card narrow-card">
+        <h2 class="section-title">Admin Login</h2>
+        <p class="section-sub">
+          Only authorized admins can manage donors and blood requests.
+        </p>
+
+        <form id="adminLoginForm">
+          <input
+            type="email"
+            id="adminEmail"
+            placeholder="Admin email"
+            required
+          />
+          <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" class="btn">Login</button>
+        </form>
+
+        <p id="adminLoginMessage" class="message"></p>
+      </section>
+
+      <!-- ADMIN PANEL (HIDDEN UNTIL LOGIN) -->
+      <section
+        id="adminPanelCard"
+        class="card wide-card"
+        style="display: none;"
+      >
+        <div class="admin-header">
+          <h2 class="section-title">Admin Panel</h2>
+          <button id="adminLogoutBtn" class="btn secondary-btn">
+            Logout
+          </button>
+        </div>
+
+        <p class="section-sub">
+          Manage donors and emergency blood requests. This area is protected
+          with login.
+        </p>
+
+        <!-- MANAGE DONORS -->
+        <section class="admin-section">
+          <h3>Manage Donors</h3>
+          <p class="section-sub">
+            View all registered donors, verify them and update availability.
+          </p>
+
+          <!-- ✅ IDs match main.js -->
+          <button id="loadDonorsBtn" class="btn">Load All Donors</button>
+          <div
+            id="adminDonorList"
+            class="admin-table-wrapper"
+            style="margin-top: 0.8rem;"
+          >
+            <!-- JS will render donors table here -->
+          </div>
+        </section>
+
+        <hr
+          style="margin: 2rem 0; border: none; border-top: 1px solid #e5e7eb;"
+        />
+
+        <!-- MANAGE REQUESTS -->
+        <section class="admin-section">
+          <h3>Manage Requests</h3>
+          <p class="section-sub">
+            View active blood requests and mark them as closed once fulfilled.
+          </p>
+
+          <!-- ✅ IDs match main.js -->
+          <button id="loadRequestsBtn" class="btn">Load Open Requests</button>
+          <div
+            id="adminRequestList"
+            class="admin-table-wrapper"
+            style="margin-top: 0.8rem;"
+          >
+            <!-- JS will render requests table here -->
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- JS bundle (imports style.css & axios) -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

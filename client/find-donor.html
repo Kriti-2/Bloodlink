@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BloodLink • Find Donor</title>
+    <!-- Leaflet Map CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+
+  </head>
+  <body>
+    <!-- TOP NAVBAR -->
+     
+    <header class="top-bar">
+      <div class="top-inner">
+        <div class="app-title">
+          BloodLink <span>• Smart Blood Network</span>
+        </div>
+
+        <nav class="top-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="donor.html">Become Donor</a>
+          <a class="nav-link" href="need-blood.html">Emergency</a>
+          <a class="nav-link active" href="find-donor.html">Find Donor</a>
+          <a class="nav-link" href="admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-wrapper soft-background">
+      <section class="page-hero">
+        <h1 class="page-title">Find Verified Donors</h1>
+        <h2>Donors Near You</h2>
+
+<div id="map"></div>
+
+        <p class="page-sub">
+          Search donors by blood group and city. Admin can prioritize verified &
+          available donors.
+        </p>
+
+        <!-- ✅ FORM IDS MATCH main.js (searchForm, searchBloodGroup, searchCity) -->
+        <form id="searchForm" class="inline-filter">
+          <select id="searchBloodGroup">
+            <option value="">Any Blood Group</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>O+</option><option>O-</option>
+            <option>AB+</option><option>AB-</option>
+          </select>
+
+          <input type="text" id="searchCity" placeholder="City (optional)" />
+
+          <button type="submit" class="btn primary-btn">Search Donors</button>
+        </form>
+      </section>
+
+      <!-- ✅ RESULTS CONTAINER ID MATCHES main.js (searchResults) -->
+      <section class="card list-card">
+        <h2 class="section-title">Matching Donors</h2>
+        <div id="searchResults" class="list-items">
+          <!-- JS will render donors here -->
+        </div>
+      </section>
+      <div
+  id="donorMap"
+  style="height: 400px; width: 100%; border-radius: 12px; margin-top: 1rem;"
+></div>
+
+    </main>
+
+    <!-- Use same JS bundle as other pages -->
+    <script type="module" src="/src/main.js"></script>
+    <!-- Leaflet Map JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BloodLink • Emergency</title>
+  </head>
+  <body>
+    <!-- TOP NAVBAR (same as index & donor) -->
+     
+    <header class="top-bar">
+      <div class="top-inner">
+        <div class="app-title">
+          BloodLink <span>• Smart Blood Network</span>
+        </div>
+
+        <nav class="top-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="donor.html">Become Donor</a>
+          <a class="nav-link active" href="need-blood.html">Emergency</a>
+          <a class="nav-link" href="find-donor.html">Find Donor</a>
+          <a class="nav-link" href="admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-wrapper">
+      <section id="request" class="card wide-card">
+        <h2 class="section-title">Emergency Blood Request</h2>
+        <p class="section-sub">
+          Raise a request when a patient urgently needs blood. Nearby donors and hospitals can respond quickly.
+          <div id="matchResults" class="match-results">
+  <!-- Suggested donors will appear here -->
+</div>
+
+        </p>
+
+        <!-- ✅ THIS FORM MATCHES main.js (requestForm + IDs) -->
+        <form id="requestForm">
+          <select id="reqBloodGroup">
+            <option value="">Required Blood Group</option>
+            <option>A+</option><option>A-</option>
+            <option>B+</option><option>B-</option>
+            <option>O+</option><option>O-</option>
+            <option>AB+</option><option>AB-</option>
+          </select>
+
+          <input placeholder="Hospital Name" id="hospitalName" />
+          <input placeholder="City" id="reqCity" />
+          <input placeholder="Contact Number" id="contactNumber" />
+
+          <select id="urgency">
+            <option value="normal">Normal</option>
+            <option value="urgent">Urgent</option>
+            <option value="critical">Critical</option>
+          </select>
+
+          <button type="submit" class="btn">Create Request</button>
+        </form>
+        <div id="matchedDonorsBox" style="margin-top: 2rem;"></div>
+
+
+        <!-- ✅ THIS MESSAGE ID ALSO MATCHES main.js -->
+        <p id="requestMessage" class="message"></p>
+        <div id="matchedDonorsBox" class="matched-box"></div>
+
+      </section>
+    </main>
+
+    <!-- Load the same JS bundle (Vite + axios + CSS) -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
